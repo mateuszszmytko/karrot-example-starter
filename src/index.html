@@ -1,0 +1,89 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Karrot - example starter</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+</head>
+
+<body k-name="app">
+    <nav class="p-nav">
+        <div class="o-container">
+            <div class="o-grid o-grid--align-center">
+                <div class="o-grid__item sm-4">
+                    <p class="c-logo">
+                        <a href="/">
+                            <img src="./assets/logo-white.png" alt> Karrot
+                        </a>
+                    </p>
+                </div>
+                <div class="o-grid__item sm-8">
+                    <ul class="c-menu">
+                        <li>
+                            <a class="c-menu__link" k-name="scroll-to" href="#header">Top</a>
+                        </li>
+                        <li>
+                            <a class="c-menu__link" k-name="scroll-to" href="#form-example">Form example</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <header id="header" class="p-header">
+        <div class="o-container">
+            <h1 class="p-header__title">
+                Karrot example starter
+            </h1>
+            <p class="p-header__text">
+                Welcome to Karrot's example starter. You can find here everything you need to start your project using
+                Karrot. Including webpack config (typescript, scss and html loaders), configured "tsconfig.json" file,
+                typescript linter configuration. This project also include advanced "SEM&BIO" scss structure, you can
+                read more <a href="https://css-tricks.com/combining-the-powers-of-sem-and-bio-for-improving-css/">here</a>.
+            </p>
+
+        </div>
+    </header>
+    <section id="form-example">
+        <div class="o-container">
+            <h2 class="c-title">Form example</h2>
+            <form k-name="my-form" data-a="raa" data-validation-type="mixed" class="c-form jsFormValidation jsFormAjax"
+                action="https://jsonplaceholder.typicode.com/posts">
+
+                <div class="c-form__group">
+                    <label for="name">Your name</label>
+                    <input type="text" name="name" id="name">
+                </div>
+                <div class="c-form__group">
+                    <label for="name">Your email</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div class="c-form__checkbox">
+                    <label>
+                        <input type="checkbox" name="asd" id="aaa" required>
+                        <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam, ipsum?</span>
+                    </label>
+
+                </div>
+
+
+                <button k-name="submit" type="submit" class="c-form__submit c-btn">Send</button>
+            </form>
+            <div class="c-form-output" k-name="formOutput"></div>
+
+        </div>
+    </section>
+
+</body>
+
+</html>
