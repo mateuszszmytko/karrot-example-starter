@@ -8,13 +8,10 @@ h6 {
         font-family: font('heading');
     }
     
-    margin: spacing('default') 0;
-    color: color('heading');
-    line-height: $base-line-height;
+    margin: 1em 0;
 }
 
 p {
-    margin: spacing('default') 0;
-    line-height: $base-line-height;
+    margin: 1em 0;
 }
 

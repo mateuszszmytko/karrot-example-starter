@@ -34,6 +34,16 @@ module.exports = {
                 test: /\.(webm|mp4)$/,
                 loader: 'file-loader?name=assets/[name].[ext]'
             },
+            {
+                test: /\.m?js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env'],
+                    }
+                }
+            }
         ]
     },
     plugins: [

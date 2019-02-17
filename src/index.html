@@ -15,7 +15,7 @@
 
 </head>
 
-<body k-name="app">
+<body k-item="app">
     <nav class="p-nav">
         <div class="o-container">
             <div class="o-grid o-grid--align-center">
@@ -29,10 +29,10 @@
                 <div class="o-grid__item sm-8">
                     <ul class="c-menu">
                         <li>
-                            <a class="c-menu__link" k-name="scroll-to" href="#header">Top</a>
+                            <a class="c-menu__link" k-item="link" href="#header">Top</a>
                         </li>
                         <li>
-                            <a class="c-menu__link" k-name="scroll-to" href="#form-example">Form example</a>
+                            <a class="c-menu__link" k-item="link" href="#form-example">Form example</a>
                         </li>
 
                     </ul>
@@ -47,9 +47,8 @@
             </h1>
             <p class="p-header__text">
                 Welcome to Karrot's example starter. You can find here everything you need to start your project using
-                Karrot. Including webpack config (typescript, scss and html loaders), configured "tsconfig.json" file,
-                typescript linter configuration. This project also include advanced "SEM&BIO" scss structure, you can
-                read more <a href="https://css-tricks.com/combining-the-powers-of-sem-and-bio-for-improving-css/">here</a>.
+                Karrot. Including webpack config (babel, scss and html loaders), example usage of Karrot and more. This project also include advanced "SEM&BIO" scss structure, you can
+                read more <a href="https://css-tricks.com/combining-the-powers-of-sem-and-bio-for-improving-css/">here</a> and use <a href="https://github.com/mateuszszmytko/raa-style-base" target="_blank">@raa/style-base</a>.
             </p>
 
         </div>
@@ -57,7 +56,7 @@
     <section id="form-example">
         <div class="o-container">
             <h2 class="c-title">Form example</h2>
-            <form k-name="my-form" data-a="raa" data-validation-type="mixed" class="c-form jsFormValidation jsFormAjax"
+            <form k-item="my-form" data-a="raa" data-validation-type="mixed" class="c-form jsFormValidation jsFormAjax"
                 action="https://jsonplaceholder.typicode.com/posts">
 
                 <div class="c-form__group">
@@ -77,9 +76,9 @@
                 </div>
 
 
-                <button k-name="submit" type="submit" class="c-form__submit c-btn">Send</button>
+                <button k-item="submit" type="submit" class="c-form__submit c-btn">Send</button>
             </form>
-            <div class="c-form-output" k-name="formOutput"></div>
+            <div class="c-form-output" k-item="formOutput"></div>
 
         </div>
     </section>

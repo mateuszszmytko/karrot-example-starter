@@ -1,0 +1,48 @@
+//sass-lint:disable indentation
+$breakpoints: (
+    xs: 0, 
+    sm: 576px, 
+    md: 768px, 
+    lg: 992px, 
+    xl: 1200px,
+);
+
+$font-sizes: ( 
+    'title': (xs: 24px, lg: 28px, xl: 32px), 
+    'subtitle': (xs: 18px, lg: 22px, xl: 24px), 
+    'default': 1rem, 
+    'small': .75rem, 
+    'tiny': 9px 11px 
+);
+
+$fonts: ( 
+    'default': 'Open Sans'
+);
+
+$colors: ( 
+    'primary': #eb8a23, 
+    'text': #111, 
+    'background': #fff, 
+    'link': #eb8a23, 
+    'link-hover': #eb8a23, 
+    'error': #c72727,
+);
+
+$container-sizes: (
+    sm: 540px, md: 720px, lg: 960px, xl: 1170px 
+);
+
+
+// call initial mixin
+@include raa-style-base($breakpoints);
+
+// define your colors
+@include define-colors($colors);
+
+//define your fonts
+@include define-fonts($fonts);
+@include define-font-sizes($font-sizes);
+
+//create container and grid
+@include create-container('o-container', $container-sizes, 30px);
+@include create-grid('o-grid', 12, 30px);

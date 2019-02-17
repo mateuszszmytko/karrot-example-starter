@@ -12,6 +12,12 @@
 
 .c-menu__link {
     color: color('background');
-
     text-transform: uppercase;
+
+    &:active,
+    &:focus,
+    &:hover {
+        color: color('text');
+    }
+
 }

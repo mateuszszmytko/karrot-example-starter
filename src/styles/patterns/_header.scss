@@ -9,13 +9,13 @@
 }
 
 .p-header__title {
-    @include font-size('title');
+    @include font('title');
     font-weight: 300;
 }
 
 .p-header__text {
     max-width: 770px;
     margin: 2em auto;
-    @include font-size('subtitle');
+    @include font('subtitle');
     font-weight: 300;
 }
