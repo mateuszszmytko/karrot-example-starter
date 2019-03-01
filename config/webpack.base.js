@@ -21,7 +21,6 @@ module.exports = {
 
     module: {
         rules: [
-            { test: /\.ts?$/, use: "ts-loader" },
             {
                 test: /\.html$/,
                 loader: 'html-loader?attrs[]=img:src&attrs[]=video:src&attrs[]=source:src'
