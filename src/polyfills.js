@@ -1,4 +1,5 @@
-// unquote if use fetch
-// if (!window.fetch) {
-//   require('whatwg-fetch');
-// }
+require('es6-shim');
+
+if (!window.fetch) {
+  require('whatwg-fetch');
+}
