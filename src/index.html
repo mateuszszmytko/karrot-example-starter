@@ -12,6 +12,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
     <![endif]-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <script> var i = new Image;i.onload = i.onerror = function () {document.body.classList.add(i.height ? "webp" : "no-webp");}; i.src = "data:image/webp;base64,UklGRhoAAABXRUJQVlA4TA0AAAAvAAAAEAcQERGIiP4HAA=="; </script>
 
 </head>
 
@@ -33,6 +34,9 @@
                         </li>
                         <li>
                             <a class="c-menu__link" k-item="link" href="#form-example">Form example</a>
+                        </li>
+                        <li>
+                            <a class="c-menu__link" k-item="link" href="#lazy">Lazy loading</a>
                         </li>
 
                     </ul>
@@ -56,7 +60,7 @@
     <section id="form-example">
         <div class="o-container">
             <h2 class="c-title">Form example</h2>
-            <form k-item="my-form" data-a="raa" data-validation-type="mixed" class="c-form jsFormValidation jsFormAjax"
+            <form k-item="my-form" data-validation-type="mixed" class="c-form jsFormValidation jsFormAjax"
                 action="https://jsonplaceholder.typicode.com/posts">
 
                 <div class="c-form__group">
@@ -80,6 +84,12 @@
             </form>
             <div class="c-form-output" k-item="formOutput"></div>
 
+        </div>
+    </section>
+    <section id="lazy">
+        <div class="o-container">
+            <h2 class="c-title">Lazy loading</h2>
+            <img data-src="./assets/logo.png" data-height="355" alt="Karrot" k-item="lazy">
         </div>
     </section>
 

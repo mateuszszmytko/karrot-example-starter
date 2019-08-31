@@ -1,20 +1,19 @@
 const path = require('path'),
-    HtmlWebpackPlugin = require('html-webpack-plugin');;
+    HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const srcDir = path.resolve(__dirname, '../../'); // resolve project src directory
 module.exports = {
     devtool: 'source-map',
     entry: {
         polyfills: './src/polyfills.js',
         main: './src/page.js',
     },
-
     output: {
         path: path.resolve('./build'),
         publicPath: '',
         filename: '[name].js',
         chunkFilename: '[id].chunk.js'
     },
+    
     resolve: {
         extensions: ['.ts', '.tsx', ".js", ".json"],
     },
@@ -23,7 +22,7 @@ module.exports = {
         rules: [
             {
                 test: /\.html$/,
-                loader: 'html-loader?attrs[]=img:src&attrs[]=video:src&attrs[]=source:src'
+                loader: 'html-loader?attrs[]=img:src&attrs[]=img:data-src&attrs[]=video:src&attrs[]=source:src'
             },
             {
                 test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
@@ -43,7 +42,7 @@ module.exports = {
                             [
                                 "@babel/preset-env",
                                 {
-                                  "useBuiltIns": "usage"
+                                    "useBuiltIns": "usage"
                                 }
                             ]
                         ],
@@ -56,6 +55,9 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'src/index.html',
             filename: 'index.html',
-        })
+            minify: {
+                collapseWhitespace: true
+            }
+        }),
     ]
 };
