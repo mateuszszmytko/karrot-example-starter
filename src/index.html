@@ -12,6 +12,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
     <![endif]-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <script> var i = new Image;i.onload = i.onerror = function () {document.body.classList.add(i.height ? "webp" : "no-webp");}; i.src = "data:image/webp;base64,UklGRhoAAABXRUJQVlA4TA0AAAAvAAAAEAcQERGIiP4HAA=="; </script>
 
 </head>
 
@@ -34,6 +35,9 @@
                         <li>
                             <a class="c-menu__link" k-item="link" href="#form-example">Form example</a>
                         </li>
+                        <li>
+                            <a class="c-menu__link" k-item="link" href="#lazy">Lazy loading</a>
+                        </li>
 
                     </ul>
                 </div>
@@ -49,7 +53,7 @@
                 Welcome to Karrot's example starter. You can find here everything you need to start your project using
                 Karrot. Including webpack config (typescript, scss and html loaders), configured "tsconfig.json" file,
                 typescript linter configuration. This project also include advanced "SEM&BIO" scss structure, you can
-                read more <a href="https://css-tricks.com/combining-the-powers-of-sem-and-bio-for-improving-css/">here</a>.
+                read more <a href="https://css-tricks.com/combining-the-powers-of-sem-and-bio-for-improving-css/">here</a> and use <a href="https://github.com/mateuszszmytko/raa-style-base" target="_blank">@raa/style-base</a>..
             </p>
 
         </div>
@@ -81,6 +85,12 @@
             </form>
             <div class="c-form-output" k-item="formOutput"></div>
 
+        </div>
+    </section>
+    <section id="lazy">
+        <div class="o-container">
+            <h2 class="c-title">Lazy loading</h2>
+            <img data-src="./assets/logo.png" data-height="355" alt="Karrot" k-item="lazy">
         </div>
     </section>
 

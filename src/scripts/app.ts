@@ -1,14 +1,14 @@
-import { Karrot, Hooks } from '@karrot/core';
+import { Karrot, KarrotItem } from '@karrot/core';
 
 export class App {
 
-    constructor(public element: HTMLElement, public hooks: Hooks) {
+    constructor(public item: KarrotItem<HTMLElement>) {
     }
 
     public kOnInit(): void {
         const myForm = Karrot.get('my-form');
 
-        myForm.addAction('formValidation.error', (capsule) => {
+        myForm.hooks.addAction('formValidation.error', (capsule) => {
             // pass validation message error to logger
             console.log(capsule.message);
         });
